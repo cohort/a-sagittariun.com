@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>{{ page.name }} | Store | A Sagittariun</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Language" content="en-us" />
+  <meta name="description" content="{{ page.meta_description }}" />
+  <meta name="keywords" content="{{ page.meta_keywords }}" />
+  <meta name="fancyzoom-images" content="{{ 'zoom/' | theme_image_url }}" />
+  <link href="/products.rss" rel="alternate" title="Product RSS Feed" type="application/rss+xml" />
+  <script src="//ajax.googleapis.com/ajax/libs/prototype/1.6.0.2/prototype.js"></script>
+  <script src="{{ theme | theme_js_url }}" type="text/javascript"></script>
+  <link href="{{ theme | theme_css_url }}" media="screen" rel="Stylesheet" type="text/css" />
+
+  <link href="http://dev.cohortstudio.com/a-sagittariun/a-sagittariun-style.css" media="screen" rel="Stylesheet" />
+  
+  {{ head_content }}
+</head>
+
+<body id="{{ page.permalink }}-page" class="{{ page.permalink }} {{ page.category }}">
+
+  <div id="wrap">
+
+    <noscript>
+      <div class="error" id="error">
+        <ul>
+          <li>JavaScript must be enabled to use this store!</li>
+        </ul>
+      </div>
+    </noscript>
+
+    {% if errors != blank %}
+    <div id="error" class="error">
+      <ul>
+        {% for error in errors %}<li>{{ error }}</li>{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    {% if store.website != blank %}
+    <div id="website">
+      <a href="{{ store.website }}">Back to site</a>
+    </div>
+    {% endif %}
+
+    <header id="header" class="site-head" role="banner">
+      <div class="site-head-inner clearfix">
+        <h1>
+          <a href="http://www.a-sagittariun.com">
+            A Sagittariun
+          </a>
+        </h1>
+        <nav class="main-nav" role="navigation">
+          <a href="#" class="responsive-menu-toggle">
+            <span class="menu-bar menu-bar-top"></span>
+            <span class="menu-bar menu-bar-middle"></span>
+            <span class="menu-bar menu-bar-bottom"></span>
+          </a>
+          <div class="responsive-menu">
+            <div class="menu-main-menu-container">
+              <ul id="menu-main-menu" class="menu"><!--
+                --><li class="menu-item"><a href="http://www.a-sagittariun.com/">Dream Ritual</a></li>
+                <li class="menu-item"><a href="http://www.a-sagittariun.com/music">Music</a></li>
+                <li class="menu-item current-menu-item"><a href="/">Store</a></li>
+                <li class="menu-item"><a href="http://www.a-sagittariun.com/blog">Blog</a></li>
+                <li class="menu-item"><a href="http://www.a-sagittariun.com/about">About</a></li>
+              </ul>
+            </div>						
+            <a class="menu-icon menu-icon-twitter"  href="https://twitter.com/a_sagittariun"><span class="icon-twitter"></span></a>
+            <a class="menu-icon menu-icon-facebook" href="http://www.facebook.com/pages/A-Sagittariun/136493829781921?sk=wall"><span class="icon-facebook"></span></a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div id="main" class="site-main">
+      
+      <div id="primary" class="content-area">
+	<div id="content" class="site-content" role="main">
+
+          <header class="entry-header">
+            <h2 class="entry-title">Store</h2>
+            <ul class="minicart-menu">
+              <li class="minicart-items"><span id="cart-count">{{ cart.item_count | pluralize: 'item', 'items' }}</span></li>
+              <li class="minicart-total"><span id="cart-total">{{ cart.total | money_with_sign }}</span></li>
+              <li><a href="/cart">View Cart</a></li>
+              <li><a href="/checkout">Checkout</a></li>
+            </ul>
+          </header>
+
+          <div id="main-content" class="clearfix">
+            {% if page.category == 'custom' %}
+            {{ page_content | paragraphs }}
+            {% else %}
+            {{ page_content }}
+            {% endif %}
+          </div>
+
+        </div><!-- / #content -->
+      </div><!-- / #primary -->
+          
+    </div><!-- / #main -->
+    
+    <footer class="site-foot clearfix">
+      <div class="site-foot-inner">
+        <div class="mailing-list">
+          <div id="secondary" class="sidebar-container" role="complementary">
+            <div class="widget-area">
+              <aside id="ns_widget_mailchimp-2" class="widget widget_ns_mailchimp"><h3 class="widget-title">Mailing list</h3>	
+
+                <form action="http://a-sagittartiun.us3.list-manage2.com/subscribe/post?u=cdcfb938ab5654f6b6742f001&amp;id=b8c1705988" id="ns_widget_mailchimp_form-2" method="post">
+                  <input type="hidden" name="ns_mc_number" value="2" />
+                  <label for="mce-EMAIL">Email Address :</label>
+                  <input type="text" name="EMAIL" id="mce-EMAIL" placeholder="you@email.com" />
+                  <input class="button" type="submit" name="Submit" value="Submit" />
+                </form>
+                
+              </aside>
+            </div><!-- .widget-area -->
+          </div><!-- #secondary -->
+        </div>
+        <div class="footer-links">
+          <div class="social-links">
+            <p>A Sagittariun on:</p>
+            <div class="menu-footer-menu-container">
+              <ul id="menu-footer-menu" class="menu">
+                <li class="menu-item"><a href="https://soundcloud.com/elastic-dreams">Soundcloud</a></li>
+                <li class="menu-item"><a href="http://www.residentadvisor.net/dj/asagittariun">RA</a></li>
+                <li class="menu-item"><a href="http://www.discogs.com/artist/a+sagittariun">Discogs</a></li>
+                <li class="menu-item"><a href="http://elastic-dreams.bandcamp.com/">Bandcamp</a></li>
+                <li class="menu-item"><a href="http://elasticdreams.bigcartel.com/">Big Cartel</a></li>
+                <li class="menu-item"><a href="http://www.facebook.com/pages/A-Sagittariun/136493829781921?sk=wall">Facebook</a></li>
+                <li class="menu-item"><a href="https://twitter.com/a_sagittariun">Twitter</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="site-credits">
+            <p><a href="http://cohortstudio.com" rel="external">Site by Cohort</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+  <div id="extra-1"><span></span></div>
+  <div id="extra-2"><span></span></div>
+  <div id="extra-3"><span></span></div>
+  <div id="extra-4"><span></span></div>
+  <div id="extra-5"><span></span></div>
+  <div id="extra-6"><span></span></div>
+  
+<script src='http://www.a-sagittariun.com/wordpress/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script src='http://www.a-sagittariun.com/wordpress/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script src="http://www.a-sagittariun.com/wordpress/wp-content/themes/a-sagittariun/js/jquery.easing.1.3.js"></script>
+<script src="http://www.a-sagittariun.com/wordpress/wp-content/themes/a-sagittariun/js/jquery.flexslider-min.js"></script>
+<script src="http://www.a-sagittariun.com/wordpress/wp-content/themes/a-sagittariun/js/jquery.touchSwipe.min.js"></script>
+<script src="http://www.a-sagittariun.com/wordpress/wp-content/themes/a-sagittariun/js/screenfull.js"></script>
+<script src="http://www.a-sagittariun.com/wordpress/wp-content/themes/a-sagittariun/js/a-sag.js"></script>
+<script src="http://www.a-sagittariun.com/wordpress/wp-content/themes/a-sagittariun/js/responsive-menu.js"></script>
+<script src="http://www.a-sagittariun.com/wordpress/wp-content/themes/a-sagittariun/js/home-slides.js"></script>
+<script src="http://www.a-sagittariun.com/wordpress/wp-content/themes/a-sagittariun/js/releases.js"></script>
+<script src="http://www.a-sagittariun.com/wordpress/wp-content/themes/a-sagittariun/js/init.js"></script>
+</body>
+</html>

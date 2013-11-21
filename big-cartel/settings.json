@@ -1,0 +1,20 @@
+{
+  "products_background": "#e4e4e4",
+  "links_rollover": "#0e1b79",
+  "show_inventory_bars": false,
+  "header_background": "#404040",
+  "featured_order": "position",
+  "sidebar_links": "#5575dd",
+  "products_per_page": 9,
+  "show_newest": false,
+  "show_search": false,
+  "featured_products": 14,
+  "font": "Verdana",
+  "text": "#666666",
+  "background": "#cccccc",
+  "show_products_feed": false,
+  "show_top_selling": false,
+  "header_text": "#cde2f0",
+  "sidebar_rollovers": "#0e1b79",
+  "links": "#5575dd"
+}
