@@ -100,7 +100,7 @@ get_header(); ?>
             </div>
 
             <ul class="shop-links">
-                <!-- <li><a href="#">Buy digital album</a></li> -->
+                <li><a href="https://elastic-dreams.bandcamp.com/album/dream-ritual">Buy digital album</a></li>
                 <li><a href="http://elasticdreams.bigcartel.com/product/a-sagittariun-dream-ritual-2lp">Buy physical album</a></li>
                 <!-- <li><a href="#">Share</a></li> -->
             </ul>
