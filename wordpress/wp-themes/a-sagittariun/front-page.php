@@ -25,7 +25,7 @@ get_header(); ?>
 
             <div class="slides">
                 <div class="slide slide-home">
-                    <p>Out November 23rd</p>
+                    <p>Out Now</p>
                     <p class="slide-home-artist">A Sagittariun</p>
                     <p class="slide-home-album">Dream Ritual</p>
                     <div class="slide-controls">
@@ -102,7 +102,7 @@ get_header(); ?>
             <ul class="shop-links">
                 <li><a href="https://elastic-dreams.bandcamp.com/album/dream-ritual">Buy digital album</a></li>
                 <li><a href="http://elasticdreams.bigcartel.com/product/a-sagittariun-dream-ritual-2lp">Buy physical album</a></li>
-                <!-- <li><a href="#">Share</a></li> -->
+                <li><a class="share-link" href="#">Share</a></li>
             </ul>
 
             <a class="sound-control" href="#">
@@ -110,6 +110,18 @@ get_header(); ?>
                 <div class="sound-control-bar sound-control-mid"></div>
                 <div class="sound-control-bar sound-control-treble"></div>
             </a>
+
+            <div class="share-popup">
+                <a href="#" class="close"><span></span></a>
+                <div class="share-popup-inner">
+                    <p>Share</p>
+                    <div class="share-options">
+                        <span class='st_facebook_large' displayText='Facebook'></span>
+                        <span class='st_twitter_large' displayText='Tweet'></span>
+                        <span class='st_email_large' displayText='Email'></span>
+                    </div>
+                </div>
+            </div>
 
         </div><!-- #content -->
     </div><!-- #primary -->

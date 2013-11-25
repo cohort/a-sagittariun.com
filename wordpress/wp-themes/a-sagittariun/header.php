@@ -22,6 +22,10 @@
 	<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 	<?php wp_head(); ?>
+	<script>var switchTo5x=true;</script>
+	<script src="http://w.sharethis.com/button/buttons.js"></script>
+	<script>stLight.options({publisher: "4bf27301-5b7f-415a-af44-4c73822ede55", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
 </head>
 
 <body <?php body_class(); ?>>

@@ -19,7 +19,7 @@ ASag.homeSlides = (function($) {
         trackDuration = 0,
 
         // funcs
-        init,
+        init, initShare,
         toggleFullscreen,
         updateTimer,
         createAudio, loadTrack, playAudio, pauseAudio, stopAudio,
@@ -99,6 +99,8 @@ ASag.homeSlides = (function($) {
                     playAudio();
                 }
             });
+
+            initShare();
         };
 
         toggleFullscreen = function() {
@@ -180,6 +182,28 @@ ASag.homeSlides = (function($) {
                 var $progress = $currentSlide.find(".progress");
                 var width = Math.round((trackTime/trackDuration)*100);
                 $progress.css({width:width+"%"});
+            }
+        };
+
+        initShare = function() {
+            var $shareBtn = $(".share-link");
+            var $shareOverlay = $(".share-popup");
+            var $shareOverlayCloseBtn = $shareOverlay.find(".close");
+
+            $shareBtn.click(showShareOverlay);
+            $shareOverlayCloseBtn.click(hideShareOverlay);
+
+            $(document).keyup(function(e) {
+                if (e.keyCode == 27) { hideShareOverlay(e); }   // esc
+            });
+
+            function showShareOverlay(e) {
+                e.preventDefault();
+                $shareOverlay.fadeIn();
+            }
+            function hideShareOverlay(e) {
+                e.preventDefault();
+                $shareOverlay.fadeOut();
             }
         };
 
