@@ -959,6 +959,7 @@ Version:        0.0.1
 
             .page-album-elasticity .track .track-title {
                 font-size: 2em;
+                text-transform: inherit;
             }
 
             @media (max-width:650px) {

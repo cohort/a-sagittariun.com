@@ -69,7 +69,7 @@ get_header(); ?>
                 </div>
                 <div class="track track-06" data-album="elasticity" data-track="06">
                     <p class="track-number">06/11</p>
-                    <p class="track-title">Chapter & Verse</p>
+                    <p class="track-title">Chapter &amp; Verse</p>
                     <div class="progress-bar"><div class="progress"></div></div>
                 </div>
                 <div class="track track-07" data-album="elasticity" data-track="07">
