@@ -953,10 +953,6 @@ Version:        0.0.1
                 margin-bottom:0.25em;
             }
 
-            .track-title-img {
-                margin-left: -10px;
-            }
-
             .page-album-elasticity .track .track-title {
                 font-size: 2em;
                 text-transform: inherit;
@@ -967,6 +963,19 @@ Version:        0.0.1
                 .page-album-elasticity .track .track-title {
                     font-size: 2em;
                     font-size:1.25em;
+                }
+            }
+
+            .track-title-img {
+                margin-left: -10px;
+                width: 25px;
+                height: 25px;
+            }
+
+            @media (max-width:650px) {
+                .track-title-img {
+                    width: 13px;
+                    height: 13px;
                 }
             }
 

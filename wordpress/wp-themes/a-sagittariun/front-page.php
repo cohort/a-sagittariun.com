@@ -58,7 +58,7 @@ get_header(); ?>
                     <p class="track-number">04/11</p>
                     <p class="track-title">
                         Composition
-                        <img class="track-title-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/sagittarius.svg" alt="" width="25" height="25">
+                        <img class="track-title-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/sagittarius.svg" alt="">
                     </p>
                     <div class="progress-bar"><div class="progress"></div></div>
                 </div>
