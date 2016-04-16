@@ -56,7 +56,10 @@ get_header(); ?>
                 </div>
                 <div class="track track-04" data-album="elasticity" data-track="04">
                     <p class="track-number">04/11</p>
-                    <p class="track-title">Composition</p>
+                    <p class="track-title">
+                        Composition
+                        <img class="track-title-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/sagittarius.svg" alt="" width="25" height="25">
+                    </p>
                     <div class="progress-bar"><div class="progress"></div></div>
                 </div>
                 <div class="track track-05" data-album="elasticity" data-track="05">
