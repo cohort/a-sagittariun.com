@@ -8,9 +8,9 @@ ASag.homeSlides = (function($) {
     var
         // vars
         $bgs = $(".bg-img"),
-        $slides = $(".slide"),
+        $tracks = $(".track"),
         $soundBars = $(".sound-control-bar"),
-        $slider = $('.bg-container'),
+        $trackr = $('.bg-container'),
         $audio,
         $currentSlide,
         isPlaying = false,
@@ -28,26 +28,27 @@ ASag.homeSlides = (function($) {
 
         init = function() {
 
-            if ($slides.length < 1) { return; }
+            if ($tracks.length < 1) { return; }
 
             // https://github.com/woothemes/FlexSlider/wiki/FlexSlider-Properties
-            $slider.flexslider({
-                animation      : "slide",
+            $trackr.flexslider({
+                animation      : "track",
                 selector       : ".bg > .bg-img",
-                slideshow      : false,
+                trackshow      : false,
                 controlNav     : false,
                 prevText       : "&lt;",
                 nextText       : "&gt;",
 
-                // fade slide content
-                before: function(slider){
-                    $slides.not(":eq("+slider.animatingTo+")").fadeOut();
-                    $currentSlide = $slides.eq(slider.animatingTo);
+                // fade track content
+                before: function(trackr){
+                    $tracks.not(":eq("+trackr.animatingTo+")").fadeOut();
+                    $currentSlide = $tracks.eq(trackr.animatingTo);
 
                     $currentSlide.fadeIn();
                     var trackNo = $currentSlide.data("track");
+                    var album = $currentSlide.data("album");
                     if (trackNo) {
-                        loadTrack(trackNo);
+                        loadTrack(trackNo, album);
                     } else {
                         stopAudio();
                     }
@@ -67,13 +68,13 @@ ASag.homeSlides = (function($) {
             });
 
             // controls
-            $(".slide-control-back").on("click", function(){
-               $slider.flexslider("prev");
+            $(".track-control-back").on("click", function(){
+               $trackr.flexslider("prev");
             });
-            $(".slide-control-forward").on("click", function(){
-               $slider.flexslider("next");
+            $(".track-control-forward").on("click", function(){
+               $trackr.flexslider("next");
             });
-            $(".slide-control-fullscreen").on("click", function(){
+            $(".track-control-fullscreen").on("click", function(){
                toggleFullscreen();
             });
 
@@ -81,9 +82,9 @@ ASag.homeSlides = (function($) {
             $("#content").swipe({
                 swipe:function(event, direction, distance, duration, fingerCount) {
                     if (direction === "left") {
-                        $slider.flexslider("next");
+                        $trackr.flexslider("next");
                     } else if (direction === "right") {
-                        $slider.flexslider("prev");
+                        $trackr.flexslider("prev");
                     }
                 },
             });
@@ -107,11 +108,11 @@ ASag.homeSlides = (function($) {
             screenfull.toggle($("#page")[0]);
         };
 
-        loadTrack = function(track) {
+        loadTrack = function(track, album) {
             stopAudio();
             createAudio();
-            $("<source/>").attr("src", templateDirectory+"/audio/"+track+".mp3").attr("type", "audio/mpeg").appendTo($audio);
-            $("<source/>").attr("src", templateDirectory+"/audio/"+track+".ogg").attr("type", "audio/ogg").appendTo($audio);
+            $("<source/>").attr("src", templateDirectory+"/audio/"+album+"/"+track+".mp3").attr("type", "audio/mpeg").appendTo($audio);
+            $("<source/>").attr("src", templateDirectory+"/audio/"+album+"/"+track+".ogg").attr("type", "audio/ogg").appendTo($audio);
             $audio[0].load();
             $audio[0].play();
             $audio.on("loadedmetadata", function(e){
@@ -124,7 +125,7 @@ ASag.homeSlides = (function($) {
                 updateTimer();
             });
             $audio.on("ended", function(e){
-                $slider.flexslider("next");
+                $trackr.flexslider("next");
             });
         };
 

@@ -14,6 +14,7 @@ Version:        0.0.1
 /* fonts */
     @import url("fonts/icomoon/style.css");
     @import url("fonts/itc-anna/MyFontsWebfontsKit.css");
+    @import url("fonts/ocra/ocra.css");
 
 /* elements */
     /* root elements */
@@ -109,10 +110,21 @@ Version:        0.0.1
 
     .site-head h1,
     .site-head .menu-item,
-    .slide-home-artist,
-    .slide-home-album,
+    .track-home-artist,
+    .track-home-album,
     .entry-title {
         font-family:'AnnaITCStd', Georgia, serif;
+    }
+
+    .page-album-elasticity .track-home-album,
+    .page-album-elasticity .track-release,
+    .page-album-elasticity .track-preview,
+    .page-album-elasticity .track-number,
+    .page-album-elasticity .track-title,
+    .page-album-elasticity .shop-links,
+    .page-album-elasticity .share-popup p {
+        font-family: 'ocra', courier, monospace;
+        text-transform: uppercase;
     }
 
 
@@ -124,7 +136,7 @@ Version:        0.0.1
             padding:5px 30px;
         }
 
-        .home.page .site-head {
+        .page-album .site-head {
             background:rgba(46,46,46,0.5);
         }
 
@@ -824,7 +836,7 @@ Version:        0.0.1
 
 /* page-specific styles */
     /* home page */
-        body.home.page .site-head {
+        body.page-album .site-head {
             position:absolute;
             top:0;
             left:0;
@@ -832,12 +844,12 @@ Version:        0.0.1
             z-index:10;
         }
 
-        body.home.page.admin-bar .site-head {
+        body.page-album.admin-bar .site-head {
             top:28px;
         }
 
-        body.home.page #page,
-        body.home.page .site-main {
+        body.page-album #page,
+        body.page-album .site-main {
             min-width:100%;
             height:100%;
         }
@@ -861,22 +873,34 @@ Version:        0.0.1
                 height:100%;
             }
 
-            .bg-img-home   { background-image:url(./img/dreamritual_00.gif); }
-            .bg-img-01     { background-image:url(./img/dreamritual_01.gif); }
-            .bg-img-02     { background-image:url(./img/dreamritual_02.gif); }
-            .bg-img-03     { background-image:url(./img/dreamritual_03.gif); }
-            .bg-img-04     { background-image:url(./img/dreamritual_04.gif); }
-            .bg-img-05     { background-image:url(./img/dreamritual_05.gif); }
-            .bg-img-06     { background-image:url(./img/dreamritual_06.gif); }
-            .bg-img-07     { background-image:url(./img/dreamritual_07.gif); }
-            .bg-img-08     { background-image:url(./img/dreamritual_08.gif); }
-            .bg-img-09     { background-image:url(./img/dreamritual_09.gif); }
-            .bg-img-10     { background-image:url(./img/dreamritual_10.gif); }
-            .bg-img-11     { background-image:url(./img/dreamritual_11.gif); }
-            .bg-img-12     { background-image:url(./img/dreamritual_12.gif); }
+            .elasticity-img-home   {
+                position: absolute;
+                background-color:#000;
+                background-position:50% 50%;
+                background-repeat:no-repeat;
+                background-size:cover;
+                width:100%;
+                height:100%;
+                background-image:url(./img/elasticity-artwork.jpg);
+            }
+            .page-album-elasticity .bg-img { height: 0; }
 
-        /* slides */
-            .slides {
+            .dream-ritual-img-home   { background-image:url(./img/dreamritual_00.gif); }
+            .dream-ritual-img-01     { background-image:url(./img/dreamritual_01.gif); }
+            .dream-ritual-img-02     { background-image:url(./img/dreamritual_02.gif); }
+            .dream-ritual-img-03     { background-image:url(./img/dreamritual_03.gif); }
+            .dream-ritual-img-04     { background-image:url(./img/dreamritual_04.gif); }
+            .dream-ritual-img-05     { background-image:url(./img/dreamritual_05.gif); }
+            .dream-ritual-img-06     { background-image:url(./img/dreamritual_06.gif); }
+            .dream-ritual-img-07     { background-image:url(./img/dreamritual_07.gif); }
+            .dream-ritual-img-08     { background-image:url(./img/dreamritual_08.gif); }
+            .dream-ritual-img-09     { background-image:url(./img/dreamritual_09.gif); }
+            .dream-ritual-img-10     { background-image:url(./img/dreamritual_10.gif); }
+            .dream-ritual-img-11     { background-image:url(./img/dreamritual_11.gif); }
+            .dream-ritual-img-12     { background-image:url(./img/dreamritual_12.gif); }
+
+        /* tracks */
+            .tracks {
                 position:fixed;
                 left:0;
                 right:0;
@@ -885,7 +909,7 @@ Version:        0.0.1
                 z-index:2;
             }
 
-            .slide {
+            .track {
                 display:none;
                 position:absolute;
                 left:50%;
@@ -898,39 +922,50 @@ Version:        0.0.1
             }
 
             @media (max-width:400px) {
-                .slide {
+                .track {
                     width:280px;
                     height:140px;
                     margin:-70px 0 0 -140px;
                 }
             }
 
-            .slide p {
+            .track p {
                 font-size:1.125em; /* 18 / 16 */
                 margin:0;
             }
 
             @media (max-width:650px) {
-                .slide p {
+                .track p {
                     font-size:1em;
                 }
             }
 
-            .slide .slide-track-number { }
+            .track .track-number { }
 
-            .slide .slide-track-title {
+            .page-album-elasticity .track-number,
+            .page-album-elasticity .track-preview {
+                font-size: 0.875em;
+            }
+
+            .track .track-title {
                 font-size:3em;
                 text-transform:uppercase;
                 margin-bottom:0.25em;
             }
 
+            .page-album-elasticity .track .track-title {
+                font-size: 2em;
+            }
+
             @media (max-width:650px) {
-                .slide .slide-track-title {
+                .track .track-title,
+                .page-album-elasticity .track .track-title {
+                    font-size: 2em;
                     font-size:1.25em;
                 }
             }
 
-            .slide .progress-bar {
+            .track .progress-bar {
                 height:2px;
                 width:50%;
                 margin:0 auto;
@@ -938,7 +973,7 @@ Version:        0.0.1
                 background:rgba(255,255,255,0.5);
             }
 
-            .slide .progress {
+            .track .progress {
                 position:absolute;
                 left:0;
                 top:0;
@@ -953,8 +988,8 @@ Version:        0.0.1
                         transition: width 0.5s;
             }
 
-            /* home slide */
-                .slide-home {
+            /* home track */
+                .track-home {
                     display:block;
                     width:380px;
                     height:200px;
@@ -962,46 +997,48 @@ Version:        0.0.1
                 }
 
                 @media (max-width:400px) {
-                    .slide-home {
+                    .track-home {
                         width:300px;
                         height:140px;
                         margin:-70px 0 0 -150px;
                     }
                 }
 
-                .slide-home .slide-home-artist {
+                .track-home .track-home-artist {
                     font-size:5.3125em;
                     line-height:1;
+                }
+
+                .page-album-dream-ritual .track-home .track-home-artist {
                     color:#00a0b5;
                 }
 
-                .slide-home .slide-home-album {
+                .track-home .track-home-album {
                     font-size:2.25em;
                     line-height:1;
                 }
 
                 @media (max-width:650px) {
-                    .slide-home .slide-home-artist {
+                    .track-home .track-home-artist {
                         font-size:3em;
                     }
-                    .slide-home .slide-home-album {
+                    .track-home .track-home-album {
                         font-size:2em;
                     }
                 }
 
-
-                .slide-home .slide-controls {
+                .track-home .track-controls {
                     margin-top:20px;
                 }
 
-                .slide-home .slide-controls-guide {
+                .track-home .track-controls-guide {
                     text-align:center;
                     margin-bottom:1em;
                 }
 
-                .slide-home .slide-control-back,
-                .slide-home .slide-control-forward,
-                .slide-home .slide-control-fullscreen {
+                .track-home .track-control-back,
+                .track-home .track-control-forward,
+                .track-home .track-control-fullscreen {
                     vertical-align:top;
                     cursor:pointer;
                     display:inline-block;
@@ -1009,21 +1046,21 @@ Version:        0.0.1
                     background:url(./img/slide-controls-guide.png) transparent no-repeat center top;
                 }
 
-                .slide-home .slide-control-back,
-                .slide-home .slide-control-forward {
+                .track-home .track-control-back,
+                .track-home .track-control-forward {
                     width:17px;
                     height:17px;
                 }
 
-                .slide-home .slide-control-back {
+                .track-home .track-control-back {
                     background-position:0 -4px;
                 }
 
-                .slide-home .slide-control-forward {
+                .track-home .track-control-forward {
                     background-position:-27px -4px;
                 }
 
-                .slide-home .slide-control-fullscreen {
+                .track-home .track-control-fullscreen {
                     width:25px;
                     height:25px;
                     background-position:-64px 0;
@@ -1032,7 +1069,7 @@ Version:        0.0.1
                 }
 
                 @media (max-width:800px),(max-height:500px) {
-                    .slide-home .slide-controls {
+                    .track-home .track-controls {
                         display:none;
                     }
                 }
@@ -1217,6 +1254,10 @@ Version:        0.0.1
             .share-popup p {
                 text-transform:uppercase;
                 font-size:1.875em;
+            }
+
+            .page-album-elasticity .share-popup p {
+                font-size: 2em;
             }
 
             .share-popup p:after {

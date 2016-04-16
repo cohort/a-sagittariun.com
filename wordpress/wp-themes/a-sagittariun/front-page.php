@@ -6,6 +6,9 @@ get_header(); ?>
         <div id="content" class="site-content" role="main">
 
             <div class="bg-container">
+                <div class="elasticity-img-home"></div>
+
+                <!-- keep for slide tracks only -->
                 <div class="bg">
                     <div class="bg-img bg-img-home"></div>
                     <div class="bg-img bg-img-01"></div>
@@ -19,89 +22,83 @@ get_header(); ?>
                     <div class="bg-img bg-img-09"></div>
                     <div class="bg-img bg-img-10"></div>
                     <div class="bg-img bg-img-11"></div>
-                    <div class="bg-img bg-img-12"></div>
                 </div>
             </div>
 
-            <div class="slides">
-                <div class="slide slide-home">
-                    <p>Out Now</p>
-                    <p class="slide-home-artist">A Sagittariun</p>
-                    <p class="slide-home-album">Dream Ritual</p>
-                    <div class="slide-controls">
-                        <div class="slide-controls-guide">
-                            <div class="slide-control-back"></div>
-                            <div class="slide-control-forward"></div>
-                            <div class="slide-control-fullscreen"></div>
+            <div class="tracks">
+                <div class="track track-home">
+                    <p class="track-release">Out Now</p>
+                    <p class="track-home-artist">A Sagittariun</p>
+                    <p class="track-home-album">Elasticity</p>
+                    <div class="track-controls">
+                        <div class="track-controls-guide">
+                            <div class="track-control-back"></div>
+                            <div class="track-control-forward"></div>
+                            <div class="track-control-fullscreen"></div>
                         </div>
-                        <p>Preview songs from the album by using your keyboard or mouse, press ‘F’ to toggle fullscreen</p>
+                        <p class="track-preview">Preview songs from the album by using your keyboard or mouse, press ‘F’ to toggle fullscreen</p>
                     </div>
                 </div>
-                <div class="slide slide-01" data-track="01">
-                    <p class="slide-track-number">01/12</p>
-                    <p class="slide-track-title">Sundial</p>
+                <div class="track track-01" data-album="elasticity" data-track="01">
+                    <p class="track-number">01/11</p>
+                    <p class="track-title">Architect Of Your Existence</p>
                     <div class="progress-bar"><div class="progress"></div></div>
                 </div>
-                <div class="slide slide-02" data-track="02">
-                    <p class="slide-track-number">02/12</p>
-                    <p class="slide-track-title">Crystallisation Feat. Skip McDonald</p>
+                <div class="track track-02" data-album="elasticity" data-track="02">
+                    <p class="track-number">02/11</p>
+                    <p class="track-title">Blim Burn</p>
                     <div class="progress-bar"><div class="progress"></div></div>
                 </div>
-                <div class="slide slide-03" data-track="03">
-                    <p class="slide-track-number">03/12</p>
-                    <p class="slide-track-title">V4641 SGR</p>
+                <div class="track track-03" data-album="elasticity" data-track="03">
+                    <p class="track-number">03/11</p>
+                    <p class="track-title">Apokalypsis</p>
                     <div class="progress-bar"><div class="progress"></div></div>
                 </div>
-                <div class="slide slide-04" data-track="04">
-                    <p class="slide-track-number">04/12</p>
-                    <p class="slide-track-title">Conquering Lions</p>
+                <div class="track track-04" data-album="elasticity" data-track="04">
+                    <p class="track-number">04/11</p>
+                    <p class="track-title">Composition</p>
                     <div class="progress-bar"><div class="progress"></div></div>
                 </div>
-                <div class="slide slide-05" data-track="05">
-                    <p class="slide-track-number">05/12</p>
-                    <p class="slide-track-title">Seven Locks (In Dub)</p>
+                <div class="track track-05" data-album="elasticity" data-track="05">
+                    <p class="track-number">05/11</p>
+                    <p class="track-title">The Naming Of The Names</p>
                     <div class="progress-bar"><div class="progress"></div></div>
                 </div>
-                <div class="slide slide-06" data-track="06">
-                    <p class="slide-track-number">06/12</p>
-                    <p class="slide-track-title">The South Node</p>
+                <div class="track track-06" data-album="elasticity" data-track="06">
+                    <p class="track-number">06/11</p>
+                    <p class="track-title">Chapter & Verse</p>
                     <div class="progress-bar"><div class="progress"></div></div>
                 </div>
-                <div class="slide slide-07" data-track="07">
-                    <p class="slide-track-number">07/12</p>
-                    <p class="slide-track-title">Trine</p>
+                <div class="track track-07" data-album="elasticity" data-track="07">
+                    <p class="track-number">07/11</p>
+                    <p class="track-title">Slowdive</p>
                     <div class="progress-bar"><div class="progress"></div></div>
                 </div>
-                <div class="slide slide-08" data-track="08">
-                    <p class="slide-track-number">08/12</p>
-                    <p class="slide-track-title">The Age Of Sin</p>
+                <div class="track track-08" data-album="elasticity" data-track="08">
+                    <p class="track-number">08/11</p>
+                    <p class="track-title">Telescopium</p>
                     <div class="progress-bar"><div class="progress"></div></div>
                 </div>
-                <div class="slide slide-09" data-track="09">
-                    <p class="slide-track-number">09/12</p>
-                    <p class="slide-track-title">Year Of The Ox</p>
+                <div class="track track-09" data-album="elasticity" data-track="09">
+                    <p class="track-number">09/11</p>
+                    <p class="track-title">Quickness</p>
                     <div class="progress-bar"><div class="progress"></div></div>
                 </div>
-                <div class="slide slide-10" data-track="10">
-                    <p class="slide-track-number">10/12</p>
-                    <p class="slide-track-title">The Mind Has No Time</p>
+                <div class="track track-10" data-album="elasticity" data-track="10">
+                    <p class="track-number">10/11</p>
+                    <p class="track-title">Resurrection Of A Memory</p>
                     <div class="progress-bar"><div class="progress"></div></div>
                 </div>
-                <div class="slide slide-11" data-track="11">
-                    <p class="slide-track-number">11/12</p>
-                    <p class="slide-track-title">A Lucid Dream (Original Dream)</p>
-                    <div class="progress-bar"><div class="progress"></div></div>
-                </div>
-                <div class="slide slide-12" data-track="12">
-                    <p class="slide-track-number">12/12</p>
-                    <p class="slide-track-title">Network Restoration</p>
+                <div class="track track-11" data-album="elasticity" data-track="11">
+                    <p class="track-number">11/11</p>
+                    <p class="track-title">Black Starliner</p>
                     <div class="progress-bar"><div class="progress"></div></div>
                 </div>
             </div>
 
             <ul class="shop-links">
-                <li><a href="https://elastic-dreams.bandcamp.com/album/dream-ritual">Buy digital album</a></li>
-                <li><a href="http://elasticdreams.bigcartel.com/product/a-sagittariun-dream-ritual-2lp">Buy physical album</a></li>
+                <li><a href="https://elastic-dreams.bandcamp.com/album/elasticity">Buy digital album</a></li>
+                <li><a href="http://elasticdreams.bigcartel.com/">Buy physical album</a></li>
                 <li><a class="share-link" href="#">Share</a></li>
             </ul>
 

@@ -2,7 +2,7 @@
 
 		<?php
 				// footer on all but home page
-				if (!is_front_page()) {
+				if (!is_page('dream-ritual') && !is_page('elasticity')) {
 		?>
 
 		<footer class="site-foot clearfix">

@@ -1,8 +1,7 @@
 <?php
     include "functions/releases.php";
     include "functions/downloads.php";
-
-
+    include "functions/add-page-class.php";
 
 
 /*
